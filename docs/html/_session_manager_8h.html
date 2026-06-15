@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТГ-бот менеджер паролей: Файл /Users/zakharbakhmutov/Desktop/aaip/src/session/SessionManager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТГ-бот менеджер паролей
+   </div>
+   <div id="projectbrief">Telegram-бот для безопасного хранения паролей (C++)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_session_manager_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл SessionManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Управление пользовательскими сессиями (ключами шифрования в памяти).  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для SessionManager.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_session_manager_8h__incl.png" border="0" usemap="#a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2session_2_session_manager_8h" loading="lazy" alt=""/></div>
+<map name="a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2session_2_session_manager_8h" id="a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2session_2_session_manager_8h">
+<area shape="rect" title="Управление пользовательскими сессиями (ключами шифрования в памяти)." alt="" coords="116,5,289,61"/>
+<area shape="rect" title=" " alt="" coords="5,109,66,135"/>
+<area shape="poly" title=" " alt="" coords="151,64,73,104,71,99,149,59"/>
+<area shape="rect" title=" " alt="" coords="89,109,150,135"/>
+<area shape="poly" title=" " alt="" coords="179,60,143,100,140,95,174,62"/>
+<area shape="rect" title=" " alt="" coords="174,109,231,135"/>
+<area shape="poly" title=" " alt="" coords="204,59,204,95,200,92,200,63"/>
+<area shape="rect" title=" " alt="" coords="255,109,365,135"/>
+<area shape="poly" title=" " alt="" coords="237,59,286,99,281,99,235,64"/>
+<area shape="rect" title=" " alt="" coords="390,109,447,135"/>
+<area shape="poly" title=" " alt="" coords="270,59,378,103,372,104,269,64"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="_session_manager_8h__dep__incl.png" border="0" usemap="#a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2session_2_session_manager_8hdep" loading="lazy" alt=""/></div>
+<map name="a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2session_2_session_manager_8hdep" id="a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2session_2_session_manager_8hdep">
+<area shape="rect" title="Управление пользовательскими сессиями (ключами шифрования в памяти)." alt="" coords="201,5,374,61"/>
+<area shape="rect" href="_bot_handler_8h.html" title="Обработчик команд и callback&#45;запросов Telegram&#45;бота." alt="" coords="83,109,250,165"/>
+<area shape="poly" title=" " alt="" coords="246,69,201,110,197,106,242,73"/>
+<area shape="rect" href="main_8cpp.html" title="Точка входа Telegram&#45;бота менеджера паролей." alt="" coords="197,220,378,261"/>
+<area shape="poly" title=" " alt="" coords="290,75,290,221,285,219,286,78"/>
+<area shape="rect" href="_session_manager_8cpp.html" title=" " alt="" coords="325,109,498,165"/>
+<area shape="poly" title=" " alt="" coords="333,69,381,108,376,108,332,74"/>
+<area shape="rect" href="_bot_handler_8cpp.html" title=" " alt="" coords="5,213,173,268"/>
+<area shape="poly" title=" " alt="" coords="139,176,112,214,108,210,134,179"/>
+<area shape="poly" title=" " alt="" coords="211,172,267,220,262,220,210,177"/>
+</map>
+</div>
+</div>
+<p><a href="_session_manager_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:SessionManager" id="r_SessionManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_session_manager.html">SessionManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранит производные ключи шифрования пользователей в оперативной памяти.  <a href="class_session_manager.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:SessionManager_3A_3ASession" id="r_SessionManager_3A_3ASession"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_session_manager_1_1_session.html">SessionManager::Session</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Внутреннее представление сессии: ключ и время последнего доступа.  <a href="struct_session_manager_1_1_session.html#details">Подробнее...</a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Управление пользовательскими сессиями (ключами шифрования в памяти). </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_53e88f7fa585331171beac223e0e5b81.html">session</a></li><li class="navelem"><a href="_session_manager_8h.html">SessionManager.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

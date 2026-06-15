@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТГ-бот менеджер паролей: Файл /Users/zakharbakhmutov/Desktop/aaip/src/crypto/CryptoEngine.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТГ-бот менеджер паролей
+   </div>
+   <div id="projectbrief">Telegram-бот для безопасного хранения паролей (C++)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_crypto_engine_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл CryptoEngine.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_crypto_engine_8h_source.html">crypto/CryptoEngine.h</a>&quot;</code><br />
+<code>#include &lt;openssl/bio.h&gt;</code><br />
+<code>#include &lt;openssl/buffer.h&gt;</code><br />
+<code>#include &lt;openssl/evp.h&gt;</code><br />
+<code>#include &lt;openssl/rand.h&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="_exceptions_8h_source.html">common/Exceptions.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для CryptoEngine.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_crypto_engine_8cpp__incl.png" border="0" usemap="#a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2crypto_2_crypto_engine_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2crypto_2_crypto_engine_8cpp" id="a_2_users_2zakharbakhmutov_2_desktop_2aaip_2src_2crypto_2_crypto_engine_8cpp">
+<area shape="rect" title=" " alt="" coords="408,5,575,61"/>
+<area shape="rect" href="_crypto_engine_8h.html" title="Криптографический модуль: вывод ключа и аутентифицированное шифрование." alt="" coords="5,109,157,135"/>
+<area shape="poly" title=" " alt="" coords="407,55,154,108,153,103,408,49"/>
+<area shape="rect" title=" " alt="" coords="181,109,280,135"/>
+<area shape="poly" title=" " alt="" coords="407,63,282,106,280,101,412,61"/>
+<area shape="rect" title=" " alt="" coords="303,109,416,135"/>
+<area shape="poly" title=" " alt="" coords="453,60,392,103,389,98,448,62"/>
+<area shape="rect" title=" " alt="" coords="440,109,543,135"/>
+<area shape="poly" title=" " alt="" coords="493,59,494,95,489,92,490,63"/>
+<area shape="rect" title=" " alt="" coords="566,109,673,135"/>
+<area shape="poly" title=" " alt="" coords="532,59,592,100,586,100,531,64"/>
+<area shape="rect" title=" " alt="" coords="698,109,766,135"/>
+<area shape="poly" title=" " alt="" coords="567,59,686,103,681,103,567,64"/>
+<area shape="rect" href="_exceptions_8h.html" title="Иерархия пользовательских исключений приложения." alt="" coords="789,109,941,135"/>
+<area shape="poly" title=" " alt="" coords="576,51,801,105,795,105,576,57"/>
+<area shape="rect" title=" " alt="" coords="10,183,70,208"/>
+<area shape="poly" title=" " alt="" coords="76,133,56,171,52,168,72,136"/>
+<area shape="rect" title=" " alt="" coords="462,183,516,208"/>
+<area shape="poly" title=" " alt="" coords="151,133,448,184,446,189,150,138"/>
+<area shape="rect" title=" " alt="" coords="94,183,151,208"/>
+<area shape="poly" title=" " alt="" coords="89,133,110,169,105,169,87,137"/>
+<area shape="poly" title=" " alt="" coords="803,135,531,189,531,184,798,135"/>
+<area shape="rect" title=" " alt="" coords="826,183,904,208"/>
+<area shape="poly" title=" " alt="" coords="867,133,867,169,863,165,863,137"/>
+</map>
+</div>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_4261af1259721e3e39e0d2dd7354b511.html">crypto</a></li><li class="navelem"><a href="_crypto_engine_8cpp.html">CryptoEngine.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

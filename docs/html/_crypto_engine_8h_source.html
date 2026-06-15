@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТГ-бот менеджер паролей: Исходный файл /Users/zakharbakhmutov/Desktop/aaip/src/crypto/CryptoEngine.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТГ-бот менеджер паролей
+   </div>
+   <div id="projectbrief">Telegram-бот для безопасного хранения паролей (C++)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_crypto_engine_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CryptoEngine.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_crypto_engine_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_crypto_engine.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_crypto_engine.html">CryptoEngine</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">static</span> std::vector&lt;uint8_t&gt; <a class="code hl_function" href="class_crypto_engine.html#a0d0272610163b9f3c2edc8f7df223cae">deriveKey</a>(<span class="keyword">const</span> std::string&amp; keyFileContent);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="class_crypto_engine.html#a19376431f583fda62262d28fd7eecbdd">encrypt</a>(<span class="keyword">const</span> std::string&amp; plaintext,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                               <span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; key);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="class_crypto_engine.html#a3a93b43b45bec6d510507510325ba8f5">decrypt</a>(<span class="keyword">const</span> std::string&amp; blob,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                               <span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; key);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="class_crypto_engine.html#a5762abe82b0ee4b1ed2ffb8caa7d4119">toBase64</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; data);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">static</span> std::vector&lt;uint8_t&gt; <a class="code hl_function" href="class_crypto_engine.html#ab573ba64706010a7da233bc78be9a5ed">fromBase64</a>(<span class="keyword">const</span> std::string&amp; encoded);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_crypto_engine.html#adb5fa99bc8aedc605c96a5555c37b44d">   84</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_crypto_engine.html#adb5fa99bc8aedc605c96a5555c37b44d">KEY_SIZE</a> = 32;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_crypto_engine.html#a0d1ce29d24a06884b6047b65613df1b2">   86</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_crypto_engine.html#a0d1ce29d24a06884b6047b65613df1b2">IV_SIZE</a> = 12;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_crypto_engine.html#aa723886d78bb6d99c39b32a0aea7f475">   88</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_crypto_engine.html#aa723886d78bb6d99c39b32a0aea7f475">TAG_SIZE</a> = 16;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_crypto_engine.html#a69f20fa44183ce07b235881d9714a4dc">   90</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_crypto_engine.html#a69f20fa44183ce07b235881d9714a4dc">PBKDF2_ITERATIONS</a> = 600000;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="ttc" id="aclass_crypto_engine_html"><div class="ttname"><a href="class_crypto_engine.html">CryptoEngine</a></div><div class="ttdoc">Шифрование и расшифровка паролей алгоритмом AES-256-GCM.</div><div class="ttdef"><b>Определения</b> CryptoEngine.h:26</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_a0d0272610163b9f3c2edc8f7df223cae"><div class="ttname"><a href="class_crypto_engine.html#a0d0272610163b9f3c2edc8f7df223cae">CryptoEngine::deriveKey</a></div><div class="ttdeci">static std::vector&lt; uint8_t &gt; deriveKey(const std::string &amp;keyFileContent)</div><div class="ttdoc">Выводит симметричный ключ из содержимого файла-ключа.</div><div class="ttdef"><b>Определения</b> CryptoEngine.cpp:18</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_a0d1ce29d24a06884b6047b65613df1b2"><div class="ttname"><a href="class_crypto_engine.html#a0d1ce29d24a06884b6047b65613df1b2">CryptoEngine::IV_SIZE</a></div><div class="ttdeci">static constexpr int IV_SIZE</div><div class="ttdoc">Размер вектора инициализации (IV) для GCM в байтах.</div><div class="ttdef"><b>Определения</b> CryptoEngine.h:86</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_a19376431f583fda62262d28fd7eecbdd"><div class="ttname"><a href="class_crypto_engine.html#a19376431f583fda62262d28fd7eecbdd">CryptoEngine::encrypt</a></div><div class="ttdeci">static std::string encrypt(const std::string &amp;plaintext, const std::vector&lt; uint8_t &gt; &amp;key)</div><div class="ttdoc">Шифрует открытый текст алгоритмом AES-256-GCM.</div><div class="ttdef"><b>Определения</b> CryptoEngine.cpp:30</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_a3a93b43b45bec6d510507510325ba8f5"><div class="ttname"><a href="class_crypto_engine.html#a3a93b43b45bec6d510507510325ba8f5">CryptoEngine::decrypt</a></div><div class="ttdeci">static std::string decrypt(const std::string &amp;blob, const std::vector&lt; uint8_t &gt; &amp;key)</div><div class="ttdoc">Расшифровывает данные, ранее зашифрованные encrypt().</div><div class="ttdef"><b>Определения</b> CryptoEngine.cpp:84</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_a5762abe82b0ee4b1ed2ffb8caa7d4119"><div class="ttname"><a href="class_crypto_engine.html#a5762abe82b0ee4b1ed2ffb8caa7d4119">CryptoEngine::toBase64</a></div><div class="ttdeci">static std::string toBase64(const std::vector&lt; uint8_t &gt; &amp;data)</div><div class="ttdoc">Кодирует двоичные данные в строку Base64.</div><div class="ttdef"><b>Определения</b> CryptoEngine.cpp:141</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_a69f20fa44183ce07b235881d9714a4dc"><div class="ttname"><a href="class_crypto_engine.html#a69f20fa44183ce07b235881d9714a4dc">CryptoEngine::PBKDF2_ITERATIONS</a></div><div class="ttdeci">static constexpr int PBKDF2_ITERATIONS</div><div class="ttdoc">Число итераций PBKDF2 (рекомендация OWASP).</div><div class="ttdef"><b>Определения</b> CryptoEngine.h:90</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_aa723886d78bb6d99c39b32a0aea7f475"><div class="ttname"><a href="class_crypto_engine.html#aa723886d78bb6d99c39b32a0aea7f475">CryptoEngine::TAG_SIZE</a></div><div class="ttdeci">static constexpr int TAG_SIZE</div><div class="ttdoc">Размер тега аутентификации GCM в байтах.</div><div class="ttdef"><b>Определения</b> CryptoEngine.h:88</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_ab573ba64706010a7da233bc78be9a5ed"><div class="ttname"><a href="class_crypto_engine.html#ab573ba64706010a7da233bc78be9a5ed">CryptoEngine::fromBase64</a></div><div class="ttdeci">static std::vector&lt; uint8_t &gt; fromBase64(const std::string &amp;encoded)</div><div class="ttdoc">Декодирует строку Base64 в двоичные данные.</div><div class="ttdef"><b>Определения</b> CryptoEngine.cpp:156</div></div>
+<div class="ttc" id="aclass_crypto_engine_html_adb5fa99bc8aedc605c96a5555c37b44d"><div class="ttname"><a href="class_crypto_engine.html#adb5fa99bc8aedc605c96a5555c37b44d">CryptoEngine::KEY_SIZE</a></div><div class="ttdeci">static constexpr int KEY_SIZE</div><div class="ttdoc">Размер ключа AES-256 в байтах.</div><div class="ttdef"><b>Определения</b> CryptoEngine.h:84</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_4261af1259721e3e39e0d2dd7354b511.html">crypto</a></li><li class="navelem"><a href="_crypto_engine_8h.html">CryptoEngine.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+---
+# Стиль форматирования на основе Google C++ Style.
+BasedOnStyle: Google
+Language: Cpp
+Standard: c++17
+IndentWidth: 4
+ColumnLimit: 80
+DerivePointerAlignment: false
+PointerAlignment: Left
+...

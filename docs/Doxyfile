@@ -1,0 +1,36 @@
+# Конфигурация Doxygen для проекта «ТГ-бот менеджер паролей».
+# Генерация: из каталога docs выполнить `doxygen Doxyfile`.
+
+PROJECT_NAME           = "ТГ-бот менеджер паролей"
+PROJECT_BRIEF          = "Telegram-бот для безопасного хранения паролей (C++)"
+OUTPUT_DIRECTORY       = .
+OUTPUT_LANGUAGE        = Russian
+
+# Исходные файлы (пути относительно каталога docs).
+INPUT                  = ../src
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = YES
+
+# Извлекать документацию для всех сущностей, включая приватные члены.
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Кодировка исходников.
+INPUT_ENCODING         = UTF-8
+
+# Форматы вывода.
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+
+# Диаграммы наследования и вызовов (требуется Graphviz/dot).
+HAVE_DOT               = YES
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+UML_LOOK               = YES
+
+# Прочее.
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = YES
+SORT_MEMBER_DOCS       = NO

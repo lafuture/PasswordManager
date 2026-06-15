@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТГ-бот менеджер паролей: Класс BotHandler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТГ-бот менеджер паролей
+   </div>
+   <div id="projectbrief">Telegram-бот для безопасного хранения паролей (C++)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_bot_handler.html','','class_bot_handler-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс BotHandler</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Связывает Telegram Bot API с модулями хранилища, шифрования и сессий.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bot_handler_8h_source.html">BotHandler.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса BotHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bot_handler__coll__graph.png" border="0" usemap="#a_bot_handler_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_bot_handler_coll__map" id="a_bot_handler_coll__map">
+<area shape="rect" title="Связывает Telegram Bot API с модулями хранилища, шифрования и сессий." alt="" coords="77,326,215,636"/>
+<area shape="rect" href="class_database.html" title="Обёртка над SQLite для хранения зашифрованных паролей." alt="" coords="5,5,134,255"/>
+<area shape="poly" title=" " alt="" coords="97,252,111,309,106,309,96,257"/>
+<area shape="rect" href="class_session_manager.html" title="Хранит производные ключи шифрования пользователей в оперативной памяти." alt="" coords="159,26,288,234"/>
+<area shape="poly" title=" " alt="" coords="201,231,186,310,181,308,199,236"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad0760555d55ec817faed8e693c218108" id="r_ad0760555d55ec817faed8e693c218108"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad0760555d55ec817faed8e693c218108">BotHandler</a> (const std::string &amp;token, <a class="el" href="class_database.html">Database</a> &amp;db, <a class="el" href="class_session_manager.html">SessionManager</a> &amp;sm)</td></tr>
+<tr class="memdesc:ad0760555d55ec817faed8e693c218108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт обработчик и регистрирует все события бота.  <br /></td></tr>
+<tr class="memitem:a041d66d92f7c4fd60541c648b30e0786" id="r_a041d66d92f7c4fd60541c648b30e0786"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a041d66d92f7c4fd60541c648b30e0786">run</a> ()</td></tr>
+<tr class="memdesc:a041d66d92f7c4fd60541c648b30e0786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает бесконечный цикл длинного опроса (long polling).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a534b720924d6529c7763a6dcd6729d03" id="r_a534b720924d6529c7763a6dcd6729d03"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a534b720924d6529c7763a6dcd6729d03">onStart</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:a534b720924d6529c7763a6dcd6729d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик команды /start — приветствие и запрос файла-ключа.  <br /></td></tr>
+<tr class="memitem:a975e965255272ce6bdb8811b1df25e33" id="r_a975e965255272ce6bdb8811b1df25e33"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a975e965255272ce6bdb8811b1df25e33">onHelp</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:a975e965255272ce6bdb8811b1df25e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик команды /help — справка по командам.  <br /></td></tr>
+<tr class="memitem:a9ad4be0a9b358d67f605c68dc74be916" id="r_a9ad4be0a9b358d67f605c68dc74be916"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9ad4be0a9b358d67f605c68dc74be916">onAdd</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:a9ad4be0a9b358d67f605c68dc74be916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик команды /add — сохранение нового пароля.  <br /></td></tr>
+<tr class="memitem:a639e42639fe58d573ee21c3694978d32" id="r_a639e42639fe58d573ee21c3694978d32"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a639e42639fe58d573ee21c3694978d32">onGet</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:a639e42639fe58d573ee21c3694978d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик команды /get — получение пароля с кнопкой «Копировать».  <br /></td></tr>
+<tr class="memitem:a053e99af8e2addae6656c7e9ae141a15" id="r_a053e99af8e2addae6656c7e9ae141a15"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a053e99af8e2addae6656c7e9ae141a15">onChange</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:a053e99af8e2addae6656c7e9ae141a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик команды /change — изменение существующего пароля.  <br /></td></tr>
+<tr class="memitem:a16431549e68ea8167d9efc021772c3ec" id="r_a16431549e68ea8167d9efc021772c3ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16431549e68ea8167d9efc021772c3ec">onDelete</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:a16431549e68ea8167d9efc021772c3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик команды /delete — удаление ресурса.  <br /></td></tr>
+<tr class="memitem:a59b2a584da5d5def786be192420d0596" id="r_a59b2a584da5d5def786be192420d0596"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a59b2a584da5d5def786be192420d0596">onList</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:a59b2a584da5d5def786be192420d0596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик команды /list — список всех ресурсов с паролями.  <br /></td></tr>
+<tr class="memitem:ab0e8d5ad4c5b47b6641dd398e133feba" id="r_ab0e8d5ad4c5b47b6641dd398e133feba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab0e8d5ad4c5b47b6641dd398e133feba">onDocument</a> (TgBot::Message::Ptr msg)</td></tr>
+<tr class="memdesc:ab0e8d5ad4c5b47b6641dd398e133feba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик загрузки документа — приём файла-ключа.  <br /></td></tr>
+<tr class="memitem:a78e60f18959c6a9180c30e269b6f73c2" id="r_a78e60f18959c6a9180c30e269b6f73c2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a78e60f18959c6a9180c30e269b6f73c2">onCallbackQuery</a> (TgBot::CallbackQuery::Ptr query)</td></tr>
+<tr class="memdesc:a78e60f18959c6a9180c30e269b6f73c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик нажатия inline-кнопки «Копировать».  <br /></td></tr>
+<tr class="memitem:aa0a480f513c486db7092050818197770" id="r_aa0a480f513c486db7092050818197770"><td class="memItemLeft">const std::vector&lt; uint8_t &gt; *&#160;</td><td class="memItemRight"><a class="el" href="#aa0a480f513c486db7092050818197770">requireKey</a> (int64_t chatId)</td></tr>
+<tr class="memdesc:aa0a480f513c486db7092050818197770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет наличие активной сессии пользователя.  <br /></td></tr>
+<tr class="memitem:ab25b4623d5de7e9e95e61e4749346110" id="r_ab25b4623d5de7e9e95e61e4749346110"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab25b4623d5de7e9e95e61e4749346110">tryDeleteMessage</a> (int64_t chatId, std::int32_t messageId)</td></tr>
+<tr class="memdesc:ab25b4623d5de7e9e95e61e4749346110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасно удаляет сообщение, игнорируя ошибки API.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ac948c79c9eb4e6088e48b8551ad9ef9f" id="r_ac948c79c9eb4e6088e48b8551ad9ef9f"><td class="memItemLeft">TgBot::Bot&#160;</td><td class="memItemRight"><a class="el" href="#ac948c79c9eb4e6088e48b8551ad9ef9f">bot_</a></td></tr>
+<tr class="memdesc:ac948c79c9eb4e6088e48b8551ad9ef9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Экземпляр Telegram-бота.  <br /></td></tr>
+<tr class="memitem:a057cd65205470bd19289e5ad17ab8fad" id="r_a057cd65205470bd19289e5ad17ab8fad"><td class="memItemLeft"><a class="el" href="class_database.html">Database</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a057cd65205470bd19289e5ad17ab8fad">db_</a></td></tr>
+<tr class="memdesc:a057cd65205470bd19289e5ad17ab8fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранилище паролей.  <br /></td></tr>
+<tr class="memitem:a42313f35a8d0276e75e6517fdbdeeb16" id="r_a42313f35a8d0276e75e6517fdbdeeb16"><td class="memItemLeft"><a class="el" href="class_session_manager.html">SessionManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a42313f35a8d0276e75e6517fdbdeeb16">sm_</a></td></tr>
+<tr class="memdesc:a42313f35a8d0276e75e6517fdbdeeb16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Менеджер сессий.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Связывает Telegram Bot API с модулями хранилища, шифрования и сессий. </p>
+<p>Регистрирует обработчики команд (/start, /add, /get, /change, /delete, /list), обработку загрузки файла-ключа и нажатий inline-кнопки «Копировать». Каждый обработчик заключён в try/catch: любые исключения нижних слоёв перехватываются и преобразуются в понятное пользователю сообщение. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="ad0760555d55ec817faed8e693c218108" name="ad0760555d55ec817faed8e693c218108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0760555d55ec817faed8e693c218108">&#9670;&#160;</a></span>BotHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BotHandler::BotHandler </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>token</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_database.html">Database</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>db</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_session_manager.html">SessionManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sm</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт обработчик и регистрирует все события бота. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>Токен Telegram-бота, полученный от @BotFather. </td></tr>
+    <tr><td class="paramname">db</td><td>Ссылка на инициализированную базу данных. </td></tr>
+    <tr><td class="paramname">sm</td><td>Ссылка на менеджер сессий. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a041d66d92f7c4fd60541c648b30e0786" name="a041d66d92f7c4fd60541c648b30e0786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041d66d92f7c4fd60541c648b30e0786">&#9670;&#160;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::run </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запускает бесконечный цикл длинного опроса (long polling). </p>
+<p>Сетевые ошибки опроса перехватываются и логируются, после чего опрос продолжается. </p>
+
+</div>
+</div>
+<a id="a534b720924d6529c7763a6dcd6729d03" name="a534b720924d6529c7763a6dcd6729d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534b720924d6529c7763a6dcd6729d03">&#9670;&#160;</a></span>onStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onStart </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик команды /start — приветствие и запрос файла-ключа. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a975e965255272ce6bdb8811b1df25e33" name="a975e965255272ce6bdb8811b1df25e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975e965255272ce6bdb8811b1df25e33">&#9670;&#160;</a></span>onHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onHelp </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик команды /help — справка по командам. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ad4be0a9b358d67f605c68dc74be916" name="a9ad4be0a9b358d67f605c68dc74be916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad4be0a9b358d67f605c68dc74be916">&#9670;&#160;</a></span>onAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onAdd </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик команды /add — сохранение нового пароля. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение вида "/add &lt;ресурс&gt; &lt;пароль&gt;". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a639e42639fe58d573ee21c3694978d32" name="a639e42639fe58d573ee21c3694978d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639e42639fe58d573ee21c3694978d32">&#9670;&#160;</a></span>onGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onGet </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик команды /get — получение пароля с кнопкой «Копировать». </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение вида "/get &lt;ресурс&gt;". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a053e99af8e2addae6656c7e9ae141a15" name="a053e99af8e2addae6656c7e9ae141a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053e99af8e2addae6656c7e9ae141a15">&#9670;&#160;</a></span>onChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onChange </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик команды /change — изменение существующего пароля. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение вида "/change &lt;ресурс&gt; &lt;новый_пароль&gt;". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a16431549e68ea8167d9efc021772c3ec" name="a16431549e68ea8167d9efc021772c3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16431549e68ea8167d9efc021772c3ec">&#9670;&#160;</a></span>onDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onDelete </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик команды /delete — удаление ресурса. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение вида "/delete &lt;ресурс&gt;". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59b2a584da5d5def786be192420d0596" name="a59b2a584da5d5def786be192420d0596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b2a584da5d5def786be192420d0596">&#9670;&#160;</a></span>onList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onList </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик команды /list — список всех ресурсов с паролями. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab0e8d5ad4c5b47b6641dd398e133feba" name="ab0e8d5ad4c5b47b6641dd398e133feba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e8d5ad4c5b47b6641dd398e133feba">&#9670;&#160;</a></span>onDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onDocument </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::Message::Ptr</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик загрузки документа — приём файла-ключа. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Входящее сообщение с прикреплённым документом. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a78e60f18959c6a9180c30e269b6f73c2" name="a78e60f18959c6a9180c30e269b6f73c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e60f18959c6a9180c30e269b6f73c2">&#9670;&#160;</a></span>onCallbackQuery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::onCallbackQuery </td>
+          <td>(</td>
+          <td class="paramtype">TgBot::CallbackQuery::Ptr</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик нажатия inline-кнопки «Копировать». </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>Callback-запрос с данными вида "copy:&lt;ресурс&gt;". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0a480f513c486db7092050818197770" name="aa0a480f513c486db7092050818197770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a480f513c486db7092050818197770">&#9670;&#160;</a></span>requireKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; uint8_t &gt; * BotHandler::requireKey </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chatId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет наличие активной сессии пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatId</td><td>Идентификатор чата. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на ключ шифрования. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_session_exception.html" title="Сессия пользователя отсутствует или истекла (нет ключа шифрования).">SessionException</a></td><td>Если сессия отсутствует или истекла. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab25b4623d5de7e9e95e61e4749346110" name="ab25b4623d5de7e9e95e61e4749346110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25b4623d5de7e9e95e61e4749346110">&#9670;&#160;</a></span>tryDeleteMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BotHandler::tryDeleteMessage </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>chatId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int32_t</td>          <td class="paramname"><span class="paramname"><em>messageId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Безопасно удаляет сообщение, игнорируя ошибки API. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chatId</td><td>Идентификатор чата. </td></tr>
+    <tr><td class="paramname">messageId</td><td>Идентификатор сообщения. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ac948c79c9eb4e6088e48b8551ad9ef9f" name="ac948c79c9eb4e6088e48b8551ad9ef9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac948c79c9eb4e6088e48b8551ad9ef9f">&#9670;&#160;</a></span>bot_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TgBot::Bot BotHandler::bot_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Экземпляр Telegram-бота. </p>
+
+</div>
+</div>
+<a id="a057cd65205470bd19289e5ad17ab8fad" name="a057cd65205470bd19289e5ad17ab8fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057cd65205470bd19289e5ad17ab8fad">&#9670;&#160;</a></span>db_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_database.html">Database</a>&amp; BotHandler::db_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хранилище паролей. </p>
+
+</div>
+</div>
+<a id="a42313f35a8d0276e75e6517fdbdeeb16" name="a42313f35a8d0276e75e6517fdbdeeb16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42313f35a8d0276e75e6517fdbdeeb16">&#9670;&#160;</a></span>sm_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_session_manager.html">SessionManager</a>&amp; BotHandler::sm_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Менеджер сессий. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>/Users/zakharbakhmutov/Desktop/aaip/src/bot/<a class="el" href="_bot_handler_8h_source.html">BotHandler.h</a></li>
+<li>/Users/zakharbakhmutov/Desktop/aaip/src/bot/<a class="el" href="_bot_handler_8cpp.html">BotHandler.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_bot_handler.html">BotHandler</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

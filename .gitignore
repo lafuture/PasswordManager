@@ -1,0 +1,17 @@
+# Каталоги сборки
+build/
+cmake-build-*/
+
+# Файлы IDE
+.idea/
+.vscode/
+
+# Файлы баз данных, создаваемые при запуске
+*.db
+
+# Системные файлы macOS
+.DS_Store
+
+# Промежуточные файлы Doxygen (итоговый HTML в docs/html — коммитится)
+docs/html/*.md5
+docs/html/*.map

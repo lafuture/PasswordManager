@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТГ-бот менеджер паролей: Исходный файл /Users/zakharbakhmutov/Desktop/aaip/src/bot/BotHandler.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТГ-бот менеджер паролей
+   </div>
+   <div id="projectbrief">Telegram-бот для безопасного хранения паролей (C++)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_bot_handler_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BotHandler.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_bot_handler_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;tgbot/tgbot.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_session_manager_8h.html">session/SessionManager.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_database_8h.html">storage/Database.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_bot_handler.html">   24</a></span><span class="keyword">class </span><a class="code hl_function" href="class_bot_handler.html#ad0760555d55ec817faed8e693c218108">BotHandler</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="class_bot_handler.html#ad0760555d55ec817faed8e693c218108">BotHandler</a>(<span class="keyword">const</span> std::string&amp; token, <a class="code hl_class" href="class_database.html">Database</a>&amp; db, <a class="code hl_class" href="class_session_manager.html">SessionManager</a>&amp; sm);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a041d66d92f7c4fd60541c648b30e0786">run</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a534b720924d6529c7763a6dcd6729d03">onStart</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a975e965255272ce6bdb8811b1df25e33">onHelp</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a9ad4be0a9b358d67f605c68dc74be916">onAdd</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a639e42639fe58d573ee21c3694978d32">onGet</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a053e99af8e2addae6656c7e9ae141a15">onChange</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a16431549e68ea8167d9efc021772c3ec">onDelete</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a59b2a584da5d5def786be192420d0596">onList</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#ab0e8d5ad4c5b47b6641dd398e133feba">onDocument</a>(TgBot::Message::Ptr msg);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#a78e60f18959c6a9180c30e269b6f73c2">onCallbackQuery</a>(TgBot::CallbackQuery::Ptr query);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">const</span> std::vector&lt;uint8_t&gt;* <a class="code hl_function" href="class_bot_handler.html#aa0a480f513c486db7092050818197770">requireKey</a>(int64_t chatId);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bot_handler.html#ab25b4623d5de7e9e95e61e4749346110">tryDeleteMessage</a>(int64_t chatId, std::int32_t messageId);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_bot_handler.html#ac948c79c9eb4e6088e48b8551ad9ef9f">  112</a></span>    TgBot::Bot <a class="code hl_variable" href="class_bot_handler.html#ac948c79c9eb4e6088e48b8551ad9ef9f">bot_</a>;      </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_bot_handler.html#a057cd65205470bd19289e5ad17ab8fad">  113</a></span>    <a class="code hl_class" href="class_database.html">Database</a>&amp; <a class="code hl_variable" href="class_bot_handler.html#a057cd65205470bd19289e5ad17ab8fad">db_</a>;        </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_bot_handler.html#a42313f35a8d0276e75e6517fdbdeeb16">  114</a></span>    <a class="code hl_class" href="class_session_manager.html">SessionManager</a>&amp; <a class="code hl_variable" href="class_bot_handler.html#a42313f35a8d0276e75e6517fdbdeeb16">sm_</a>;  </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>};</div>
+</div>
+<div class="ttc" id="a_database_8h_html"><div class="ttname"><a href="_database_8h.html">Database.h</a></div><div class="ttdoc">Модуль хранилища зашифрованных паролей поверх SQLite.</div></div>
+<div class="ttc" id="a_session_manager_8h_html"><div class="ttname"><a href="_session_manager_8h.html">SessionManager.h</a></div><div class="ttdoc">Управление пользовательскими сессиями (ключами шифрования в памяти).</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a041d66d92f7c4fd60541c648b30e0786"><div class="ttname"><a href="class_bot_handler.html#a041d66d92f7c4fd60541c648b30e0786">BotHandler::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Запускает бесконечный цикл длинного опроса (long polling).</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:35</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a053e99af8e2addae6656c7e9ae141a15"><div class="ttname"><a href="class_bot_handler.html#a053e99af8e2addae6656c7e9ae141a15">BotHandler::onChange</a></div><div class="ttdeci">void onChange(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик команды /change — изменение существующего пароля.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:176</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a057cd65205470bd19289e5ad17ab8fad"><div class="ttname"><a href="class_bot_handler.html#a057cd65205470bd19289e5ad17ab8fad">BotHandler::db_</a></div><div class="ttdeci">Database &amp; db_</div><div class="ttdoc">Хранилище паролей.</div><div class="ttdef"><b>Определения</b> BotHandler.h:113</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a16431549e68ea8167d9efc021772c3ec"><div class="ttname"><a href="class_bot_handler.html#a16431549e68ea8167d9efc021772c3ec">BotHandler::onDelete</a></div><div class="ttdeci">void onDelete(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик команды /delete — удаление ресурса.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:200</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a42313f35a8d0276e75e6517fdbdeeb16"><div class="ttname"><a href="class_bot_handler.html#a42313f35a8d0276e75e6517fdbdeeb16">BotHandler::sm_</a></div><div class="ttdeci">SessionManager &amp; sm_</div><div class="ttdoc">Менеджер сессий.</div><div class="ttdef"><b>Определения</b> BotHandler.h:114</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a534b720924d6529c7763a6dcd6729d03"><div class="ttname"><a href="class_bot_handler.html#a534b720924d6529c7763a6dcd6729d03">BotHandler::onStart</a></div><div class="ttdeci">void onStart(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик команды /start — приветствие и запрос файла-ключа.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:66</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a59b2a584da5d5def786be192420d0596"><div class="ttname"><a href="class_bot_handler.html#a59b2a584da5d5def786be192420d0596">BotHandler::onList</a></div><div class="ttdeci">void onList(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик команды /list — список всех ресурсов с паролями.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:220</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a639e42639fe58d573ee21c3694978d32"><div class="ttname"><a href="class_bot_handler.html#a639e42639fe58d573ee21c3694978d32">BotHandler::onGet</a></div><div class="ttdeci">void onGet(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик команды /get — получение пароля с кнопкой «Копировать».</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:148</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a78e60f18959c6a9180c30e269b6f73c2"><div class="ttname"><a href="class_bot_handler.html#a78e60f18959c6a9180c30e269b6f73c2">BotHandler::onCallbackQuery</a></div><div class="ttdeci">void onCallbackQuery(TgBot::CallbackQuery::Ptr query)</div><div class="ttdoc">Обработчик нажатия inline-кнопки «Копировать».</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:255</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a975e965255272ce6bdb8811b1df25e33"><div class="ttname"><a href="class_bot_handler.html#a975e965255272ce6bdb8811b1df25e33">BotHandler::onHelp</a></div><div class="ttdeci">void onHelp(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик команды /help — справка по командам.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:87</div></div>
+<div class="ttc" id="aclass_bot_handler_html_a9ad4be0a9b358d67f605c68dc74be916"><div class="ttname"><a href="class_bot_handler.html#a9ad4be0a9b358d67f605c68dc74be916">BotHandler::onAdd</a></div><div class="ttdeci">void onAdd(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик команды /add — сохранение нового пароля.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:125</div></div>
+<div class="ttc" id="aclass_bot_handler_html_aa0a480f513c486db7092050818197770"><div class="ttname"><a href="class_bot_handler.html#aa0a480f513c486db7092050818197770">BotHandler::requireKey</a></div><div class="ttdeci">const std::vector&lt; uint8_t &gt; * requireKey(int64_t chatId)</div><div class="ttdoc">Проверяет наличие активной сессии пользователя.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:48</div></div>
+<div class="ttc" id="aclass_bot_handler_html_ab0e8d5ad4c5b47b6641dd398e133feba"><div class="ttname"><a href="class_bot_handler.html#ab0e8d5ad4c5b47b6641dd398e133feba">BotHandler::onDocument</a></div><div class="ttdeci">void onDocument(TgBot::Message::Ptr msg)</div><div class="ttdoc">Обработчик загрузки документа — приём файла-ключа.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:104</div></div>
+<div class="ttc" id="aclass_bot_handler_html_ab25b4623d5de7e9e95e61e4749346110"><div class="ttname"><a href="class_bot_handler.html#ab25b4623d5de7e9e95e61e4749346110">BotHandler::tryDeleteMessage</a></div><div class="ttdeci">void tryDeleteMessage(int64_t chatId, std::int32_t messageId)</div><div class="ttdoc">Безопасно удаляет сообщение, игнорируя ошибки API.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:58</div></div>
+<div class="ttc" id="aclass_bot_handler_html_ac948c79c9eb4e6088e48b8551ad9ef9f"><div class="ttname"><a href="class_bot_handler.html#ac948c79c9eb4e6088e48b8551ad9ef9f">BotHandler::bot_</a></div><div class="ttdeci">TgBot::Bot bot_</div><div class="ttdoc">Экземпляр Telegram-бота.</div><div class="ttdef"><b>Определения</b> BotHandler.h:112</div></div>
+<div class="ttc" id="aclass_bot_handler_html_ad0760555d55ec817faed8e693c218108"><div class="ttname"><a href="class_bot_handler.html#ad0760555d55ec817faed8e693c218108">BotHandler::BotHandler</a></div><div class="ttdeci">BotHandler(const std::string &amp;token, Database &amp;db, SessionManager &amp;sm)</div><div class="ttdoc">Создаёт обработчик и регистрирует все события бота.</div><div class="ttdef"><b>Определения</b> BotHandler.cpp:9</div></div>
+<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="class_database.html">Database</a></div><div class="ttdoc">Обёртка над SQLite для хранения зашифрованных паролей.</div><div class="ttdef"><b>Определения</b> Database.h:25</div></div>
+<div class="ttc" id="aclass_session_manager_html"><div class="ttname"><a href="class_session_manager.html">SessionManager</a></div><div class="ttdoc">Хранит производные ключи шифрования пользователей в оперативной памяти.</div><div class="ttdef"><b>Определения</b> SessionManager.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_29d667bb07f05bb7400afdc76794b290.html">bot</a></li><li class="navelem"><a href="_bot_handler_8h.html">BotHandler.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

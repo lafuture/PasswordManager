@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТГ-бот менеджер паролей: Класс CryptoEngine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТГ-бот менеджер паролей
+   </div>
+   <div id="projectbrief">Telegram-бот для безопасного хранения паролей (C++)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_crypto_engine.html','','class_crypto_engine-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс CryptoEngine</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Шифрование и расшифровка паролей алгоритмом AES-256-GCM.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_crypto_engine_8h_source.html">CryptoEngine.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса CryptoEngine:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_crypto_engine__coll__graph.png" border="0" usemap="#a_crypto_engine_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_crypto_engine_coll__map" id="a_crypto_engine_coll__map">
+<area shape="rect" title="Шифрование и расшифровка паролей алгоритмом AES&#45;256&#45;GCM." alt="" coords="5,5,168,214"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a0d0272610163b9f3c2edc8f7df223cae" id="r_a0d0272610163b9f3c2edc8f7df223cae"><td class="memItemLeft">static std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0d0272610163b9f3c2edc8f7df223cae">deriveKey</a> (const std::string &amp;keyFileContent)</td></tr>
+<tr class="memdesc:a0d0272610163b9f3c2edc8f7df223cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит симметричный ключ из содержимого файла-ключа.  <br /></td></tr>
+<tr class="memitem:a19376431f583fda62262d28fd7eecbdd" id="r_a19376431f583fda62262d28fd7eecbdd"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a19376431f583fda62262d28fd7eecbdd">encrypt</a> (const std::string &amp;plaintext, const std::vector&lt; uint8_t &gt; &amp;key)</td></tr>
+<tr class="memdesc:a19376431f583fda62262d28fd7eecbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифрует открытый текст алгоритмом AES-256-GCM.  <br /></td></tr>
+<tr class="memitem:a3a93b43b45bec6d510507510325ba8f5" id="r_a3a93b43b45bec6d510507510325ba8f5"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3a93b43b45bec6d510507510325ba8f5">decrypt</a> (const std::string &amp;blob, const std::vector&lt; uint8_t &gt; &amp;key)</td></tr>
+<tr class="memdesc:a3a93b43b45bec6d510507510325ba8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает данные, ранее зашифрованные <a class="el" href="#a19376431f583fda62262d28fd7eecbdd" title="Шифрует открытый текст алгоритмом AES-256-GCM.">encrypt()</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Закрытые статические члены</h2></td></tr>
+<tr class="memitem:a5762abe82b0ee4b1ed2ffb8caa7d4119" id="r_a5762abe82b0ee4b1ed2ffb8caa7d4119"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a5762abe82b0ee4b1ed2ffb8caa7d4119">toBase64</a> (const std::vector&lt; uint8_t &gt; &amp;data)</td></tr>
+<tr class="memdesc:a5762abe82b0ee4b1ed2ffb8caa7d4119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кодирует двоичные данные в строку Base64.  <br /></td></tr>
+<tr class="memitem:ab573ba64706010a7da233bc78be9a5ed" id="r_ab573ba64706010a7da233bc78be9a5ed"><td class="memItemLeft">static std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab573ba64706010a7da233bc78be9a5ed">fromBase64</a> (const std::string &amp;encoded)</td></tr>
+<tr class="memdesc:ab573ba64706010a7da233bc78be9a5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Декодирует строку Base64 в двоичные данные.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:adb5fa99bc8aedc605c96a5555c37b44d" id="r_adb5fa99bc8aedc605c96a5555c37b44d"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#adb5fa99bc8aedc605c96a5555c37b44d">KEY_SIZE</a> = 32</td></tr>
+<tr class="memdesc:adb5fa99bc8aedc605c96a5555c37b44d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер ключа AES-256 в байтах.  <br /></td></tr>
+<tr class="memitem:a0d1ce29d24a06884b6047b65613df1b2" id="r_a0d1ce29d24a06884b6047b65613df1b2"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a0d1ce29d24a06884b6047b65613df1b2">IV_SIZE</a> = 12</td></tr>
+<tr class="memdesc:a0d1ce29d24a06884b6047b65613df1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер вектора инициализации (IV) для GCM в байтах.  <br /></td></tr>
+<tr class="memitem:aa723886d78bb6d99c39b32a0aea7f475" id="r_aa723886d78bb6d99c39b32a0aea7f475"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#aa723886d78bb6d99c39b32a0aea7f475">TAG_SIZE</a> = 16</td></tr>
+<tr class="memdesc:aa723886d78bb6d99c39b32a0aea7f475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер тега аутентификации GCM в байтах.  <br /></td></tr>
+<tr class="memitem:a69f20fa44183ce07b235881d9714a4dc" id="r_a69f20fa44183ce07b235881d9714a4dc"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a69f20fa44183ce07b235881d9714a4dc">PBKDF2_ITERATIONS</a> = 600000</td></tr>
+<tr class="memdesc:a69f20fa44183ce07b235881d9714a4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число итераций PBKDF2 (рекомендация OWASP).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Шифрование и расшифровка паролей алгоритмом AES-256-GCM. </p>
+<p>Класс предоставляет статические функции для:</p><ul>
+<li>вывода 256-битного ключа из содержимого файла-ключа (PBKDF2-HMAC-SHA256);</li>
+<li>аутентифицированного шифрования открытого текста (AES-256-GCM);</li>
+<li>расшифровки с проверкой целостности и подлинности данных.</li>
+</ul>
+<p>Для каждой операции шифрования генерируется случайный вектор инициализации (IV), а результат кодируется в Base64 в формате <span class="tt">IV || ciphertext || tag</span>. Все ошибки выбрасываются как <a class="el" href="class_crypto_exception.html" title="Ошибка криптографической операции (шифрование, расшифровка, вывод ключа).">CryptoException</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a0d0272610163b9f3c2edc8f7df223cae" name="a0d0272610163b9f3c2edc8f7df223cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0272610163b9f3c2edc8f7df223cae">&#9670;&#160;</a></span>deriveKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint8_t &gt; CryptoEngine::deriveKey </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>keyFileContent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выводит симметричный ключ из содержимого файла-ключа. </p>
+<p>Применяется алгоритм PBKDF2-HMAC-SHA256 с фиксированной солью приложения и большим числом итераций для защиты от перебора.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyFileContent</td><td>Сырое содержимое загруженного пользователем файла-ключа. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор из 32 байт — производный ключ шифрования. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_crypto_exception.html" title="Ошибка криптографической операции (шифрование, расшифровка, вывод ключа).">CryptoException</a></td><td>Если вывод ключа завершился неудачей. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a19376431f583fda62262d28fd7eecbdd" name="a19376431f583fda62262d28fd7eecbdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19376431f583fda62262d28fd7eecbdd">&#9670;&#160;</a></span>encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CryptoEngine::encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>plaintext</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Шифрует открытый текст алгоритмом AES-256-GCM. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Открытый текст (пароль) для шифрования. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключ шифрования длиной 32 байта, полученный из <a class="el" href="#a0d0272610163b9f3c2edc8f7df223cae" title="Выводит симметричный ключ из содержимого файла-ключа.">deriveKey()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка Base64, содержащая <span class="tt">IV || ciphertext || tag</span>. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_crypto_exception.html" title="Ошибка криптографической операции (шифрование, расшифровка, вывод ключа).">CryptoException</a></td><td>При ошибке генерации IV или работы шифратора. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a93b43b45bec6d510507510325ba8f5" name="a3a93b43b45bec6d510507510325ba8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a93b43b45bec6d510507510325ba8f5">&#9670;&#160;</a></span>decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CryptoEngine::decrypt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>blob</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Расшифровывает данные, ранее зашифрованные <a class="el" href="#a19376431f583fda62262d28fd7eecbdd" title="Шифрует открытый текст алгоритмом AES-256-GCM.">encrypt()</a>. </p>
+<p>Проверяет тег аутентификации GCM: при неверном ключе или повреждённых данных расшифровка завершается исключением, а не возвратом мусора.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blob</td><td>Строка Base64 в формате <span class="tt">IV || ciphertext || tag</span>. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключ шифрования длиной 32 байта. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Расшифрованный открытый текст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_crypto_exception.html" title="Ошибка криптографической операции (шифрование, расшифровка, вывод ключа).">CryptoException</a></td><td>Если данные повреждены, слишком короткие или ключ неверный. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5762abe82b0ee4b1ed2ffb8caa7d4119" name="a5762abe82b0ee4b1ed2ffb8caa7d4119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5762abe82b0ee4b1ed2ffb8caa7d4119">&#9670;&#160;</a></span>toBase64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CryptoEngine::toBase64 </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Кодирует двоичные данные в строку Base64. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Двоичные данные. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка Base64 без переводов строк. </dd></dl>
+
+</div>
+</div>
+<a id="ab573ba64706010a7da233bc78be9a5ed" name="ab573ba64706010a7da233bc78be9a5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab573ba64706010a7da233bc78be9a5ed">&#9670;&#160;</a></span>fromBase64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint8_t &gt; CryptoEngine::fromBase64 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>encoded</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Декодирует строку Base64 в двоичные данные. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encoded</td><td>Строка Base64. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Декодированные двоичные данные. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_crypto_exception.html" title="Ошибка криптографической операции (шифрование, расшифровка, вывод ключа).">CryptoException</a></td><td>При ошибке декодирования. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="adb5fa99bc8aedc605c96a5555c37b44d" name="adb5fa99bc8aedc605c96a5555c37b44d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5fa99bc8aedc605c96a5555c37b44d">&#9670;&#160;</a></span>KEY_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CryptoEngine::KEY_SIZE = 32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Размер ключа AES-256 в байтах. </p>
+
+</div>
+</div>
+<a id="a0d1ce29d24a06884b6047b65613df1b2" name="a0d1ce29d24a06884b6047b65613df1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d1ce29d24a06884b6047b65613df1b2">&#9670;&#160;</a></span>IV_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CryptoEngine::IV_SIZE = 12</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Размер вектора инициализации (IV) для GCM в байтах. </p>
+
+</div>
+</div>
+<a id="aa723886d78bb6d99c39b32a0aea7f475" name="aa723886d78bb6d99c39b32a0aea7f475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa723886d78bb6d99c39b32a0aea7f475">&#9670;&#160;</a></span>TAG_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CryptoEngine::TAG_SIZE = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Размер тега аутентификации GCM в байтах. </p>
+
+</div>
+</div>
+<a id="a69f20fa44183ce07b235881d9714a4dc" name="a69f20fa44183ce07b235881d9714a4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f20fa44183ce07b235881d9714a4dc">&#9670;&#160;</a></span>PBKDF2_ITERATIONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CryptoEngine::PBKDF2_ITERATIONS = 600000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Число итераций PBKDF2 (рекомендация OWASP). </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>/Users/zakharbakhmutov/Desktop/aaip/src/crypto/<a class="el" href="_crypto_engine_8h_source.html">CryptoEngine.h</a></li>
+<li>/Users/zakharbakhmutov/Desktop/aaip/src/crypto/<a class="el" href="_crypto_engine_8cpp.html">CryptoEngine.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_crypto_engine.html">CryptoEngine</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
