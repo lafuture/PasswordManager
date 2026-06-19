@@ -12,6 +12,6 @@ cmake-build-*/
 # Системные файлы macOS
 .DS_Store
 
-# Промежуточные файлы Doxygen (итоговый HTML в docs/html — коммитится)
+# Промежуточные файлы Doxygen (итоговый HTML в docs/html коммитится)
 docs/html/*.md5
 docs/html/*.map

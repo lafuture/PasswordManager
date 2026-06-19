@@ -133,11 +133,8 @@ std::string CryptoEngine::decrypt(const std::string& blob,
                        plaintext_len);
 }
 
-// === НАЧАЛО ЗАИМСТВОВАННОГО КОДА ===
-// Источник: официальная документация OpenSSL (OpenSSL Wiki, "EVP / BIO Base64
-// Encoding/Decoding"), https://wiki.openssl.org/index.php/EVP_Message_Digests
-// Идиома кодирования/декодирования Base64 через цепочку BIO с флагом
-// BIO_FLAGS_BASE64_NO_NL. Адаптировано под std::string / std::vector.
+// НАЧАЛО ЗАИМСТВОВАННОГО КОДА 
+// Источник: официальная документация OpenSSL 
 std::string CryptoEngine::toBase64(const std::vector<uint8_t>& data) {
     BIO* b64 = BIO_new(BIO_f_base64());
     BIO* mem = BIO_new(BIO_s_mem());
@@ -170,4 +167,4 @@ std::vector<uint8_t> CryptoEngine::fromBase64(const std::string& encoded) {
     result.resize(len);
     return result;
 }
-// === КОНЕЦ ЗАИМСТВОВАННОГО КОДА ===
+// Конец
