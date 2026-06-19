@@ -108,8 +108,8 @@ $(function(){initNavTree('struct_config.html','','struct_config-members'); });
 Открытые атрибуты</h2></td></tr>
 <tr class="memitem:a402b4a4be741ffb18732ca6bcccd0eac" id="r_a402b4a4be741ffb18732ca6bcccd0eac"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a402b4a4be741ffb18732ca6bcccd0eac">token</a></td></tr>
 <tr class="memdesc:a402b4a4be741ffb18732ca6bcccd0eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Токен Telegram-бота.  <br /></td></tr>
-<tr class="memitem:a3b776f4ceab8d8b12093f3a5918dbf42" id="r_a3b776f4ceab8d8b12093f3a5918dbf42"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3b776f4ceab8d8b12093f3a5918dbf42">dbPath</a> = &quot;passwords.db&quot;</td></tr>
-<tr class="memdesc:a3b776f4ceab8d8b12093f3a5918dbf42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Путь к файлу базы данных.  <br /></td></tr>
+<tr class="memitem:a3b776f4ceab8d8b12093f3a5918dbf42" id="r_a3b776f4ceab8d8b12093f3a5918dbf42"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3b776f4ceab8d8b12093f3a5918dbf42">dbPath</a></td></tr>
+<tr class="memdesc:a3b776f4ceab8d8b12093f3a5918dbf42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Строка подключения к PostgreSQL.  <br /></td></tr>
 <tr class="memitem:a8a8472c48a684cdd0201992a54751641" id="r_a8a8472c48a684cdd0201992a54751641"><td class="memItemLeft">std::chrono::seconds&#160;</td><td class="memItemRight"><a class="el" href="#a8a8472c48a684cdd0201992a54751641">timeout</a> {1800}</td></tr>
 <tr class="memdesc:a8a8472c48a684cdd0201992a54751641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тайм-аут сессии в секундах.  <br /></td></tr>
 </table>
@@ -139,12 +139,14 @@ $(function(){initNavTree('struct_config.html','','struct_config-members'); });
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Config::dbPath = &quot;passwords.db&quot;</td>
+          <td class="memname">std::string Config::dbPath</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Путь к файлу базы данных. </p>
+<b>Инициализатор</b><div class="fragment"><div class="line">               =</div>
+<div class="line"><span class="stringliteral">&quot;postgresql://localhost/aaip&quot;</span></div>
+</div><!-- fragment -->
+<p>Строка подключения к PostgreSQL. </p>
 
 </div>
 </div>

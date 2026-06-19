@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['iv_5fsize_0',['IV_SIZE',['../class_crypto_engine.html#a0d1ce29d24a06884b6047b65613df1b2',1,'CryptoEngine']]]
+  ['db_5f_0',['db_',['../class_bot_handler.html#a057cd65205470bd19289e5ad17ab8fad',1,'BotHandler']]],
+  ['dbpath_1',['dbPath',['../struct_config.html#a3b776f4ceab8d8b12093f3a5918dbf42',1,'Config']]]
 ];

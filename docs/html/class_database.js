@@ -1,7 +1,7 @@
 var class_database =
 [
-    [ "Database", "class_database.html#a375d5f716924ea473af3c62ae07089e2", null ],
-    [ "~Database", "class_database.html#a84d399a2ad58d69daab9b05330e1316d", null ],
+    [ "Database", "class_database.html#a28ae1f79f242a4158e93944ec397e9c5", null ],
+    [ "~Database", "class_database.html#a341cd0fe8c615e829e3a22b74c208bb5", null ],
     [ "Database", "class_database.html#a83f8b6d2941a4aee50f225e08e97291c", null ],
     [ "operator=", "class_database.html#a46b93a4878076c7cfddd5b4058297f14", null ],
     [ "initialize", "class_database.html#ad9feb543dd274fbacd7a46303e02466c", null ],
@@ -10,5 +10,5 @@ var class_database =
     [ "updatePassword", "class_database.html#a552534b5e69183349381e4f7c5301f66", null ],
     [ "deleteResource", "class_database.html#a36fddac6a7ffb82f0ec7ff6ce736371b", null ],
     [ "listResources", "class_database.html#a10766d475474cde6bff743d5557c946d", null ],
-    [ "db_", "class_database.html#ab58ff3897c0d9ba2696a292c94a05b3b", null ]
+    [ "conn_", "class_database.html#aa495586a5dc321a222a11ae21b3fbc41", null ]
 ];

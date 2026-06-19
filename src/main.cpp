@@ -23,9 +23,10 @@
  * @brief Параметры запуска, задаваемые пользователем.
  */
 struct Config {
-    std::string token;                    ///< Токен Telegram-бота.
-    std::string dbPath = "passwords.db";  ///< Путь к файлу базы данных.
-    std::chrono::seconds timeout{1800};   ///< Тайм-аут сессии в секундах.
+    std::string token;  ///< Токен Telegram-бота.
+    std::string dbPath =
+        "postgresql://localhost/aaip";   ///< Строка подключения к PostgreSQL.
+    std::chrono::seconds timeout{1800};  ///< Тайм-аут сессии в секундах.
 };
 
 /**
@@ -38,8 +39,9 @@ static void printUsage(const std::string& prog) {
         << "Опции:\n"
         << "  --token <токен>      Токен Telegram-бота (или переменная\n"
         << "                       окружения TELEGRAM_BOT_TOKEN).\n"
-        << "  --db <путь>          Путь к файлу базы данных\n"
-        << "                       (по умолчанию: passwords.db).\n"
+        << "  --db <url>           Строка подключения к PostgreSQL\n"
+        << "                       (по умолчанию: "
+           "postgresql://localhost/aaip).\n"
         << "  --timeout <секунды>  Тайм-аут сессии (по умолчанию: 1800).\n"
         << "  --help               Показать эту справку.\n";
 }

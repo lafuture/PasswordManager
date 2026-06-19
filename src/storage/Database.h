@@ -1,20 +1,20 @@
 #pragma once
 
-#include <sqlite3.h>
-
 #include <cstdint>
+#include <memory>
+#include <pqxx/pqxx>
 #include <string>
 #include <utility>
 #include <vector>
 
 /**
  * @file Database.h
- * @brief Модуль хранилища зашифрованных паролей поверх SQLite.
+ * @brief Модуль хранилища зашифрованных паролей поверх PostgreSQL.
  */
 
 /**
  * @class Database
- * @brief Обёртка над SQLite для хранения зашифрованных паролей.
+ * @brief Обёртка над PostgreSQL (libpqxx) для хранения зашифрованных паролей.
  *
  * Каждая запись привязана к идентификатору чата Telegram (chat_id) и хранит
  * имя ресурса вместе с зашифрованным паролем. Для каждой пары
@@ -25,17 +25,19 @@
 class Database {
    public:
     /**
-     * @brief Открывает (или создаёт) базу данных по указанному пути.
-     * @param dbPath Путь к файлу базы данных. Поддерживается ":memory:" для
-     *               базы в оперативной памяти. Разделитель пути — '/'.
-     * @throws DatabaseException Если открыть базу не удалось.
+     * @brief Открывает соединение с базой данных PostgreSQL.
+     * @param connStr Строка подключения в формате
+     *                "postgresql://user:pass\@host:port/dbname" или
+     *                "host=... dbname=... user=...".
+     * @throws DatabaseException Если установить соединение не удалось.
      */
-    explicit Database(const std::string& dbPath = "passwords.db");
+    explicit Database(
+        const std::string& connStr = "postgresql://localhost/aaip");
 
     /**
      * @brief Закрывает соединение с базой данных.
      */
-    ~Database();
+    ~Database() = default;
 
     Database(const Database&) = delete;
     Database& operator=(const Database&) = delete;
@@ -98,6 +100,7 @@ class Database {
         int64_t chatId);
 
    private:
-    /// Дескриптор соединения SQLite.
-    sqlite3* db_ = nullptr;
+    /// Соединение с PostgreSQL (libpqxx). Хранится через указатель, чтобы
+    /// избежать дефолтной конструкции pqxx::connection до инициализации строки.
+    std::unique_ptr<pqxx::connection> conn_;
 };

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mutex_5f_0',['mutex_',['../class_session_manager.html#a7c9345fa74c2f46aad05736e04e0410f',1,'SessionManager']]]
+  ['lastaccess_0',['lastAccess',['../struct_session_manager_1_1_session.html#ab85ba65c6e93ff048e874cd4b480606a',1,'SessionManager::Session']]]
 ];

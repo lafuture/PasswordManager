@@ -16,6 +16,10 @@ set(OPENSSL_ROOT_DIR "/opt/homebrew/opt/openssl@3")
 find_package(OpenSSL REQUIRED)
 find_package(Boost REQUIRED)
 
+# libpq (C-библиотека PostgreSQL) ищется через стандартный модуль CMake.
+set(PostgreSQL_ROOT "/opt/homebrew/opt/postgresql@14")
+find_package(PostgreSQL REQUIRED)
+
 # --- Сторонние зависимости через CMake/FetchContent ----------------------
 # Некоторые зависимости объявляют очень старый минимум CMake; разрешаем сборку.
 set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
@@ -27,10 +31,11 @@ FetchContent_Declare(
     GIT_TAG master
 )
 
+# libpqxx — C++ обёртка над libpq, собирается средствами CMake (FetchContent).
 FetchContent_Declare(
-    sqlite3
-    URL https://www.sqlite.org/2024/sqlite-amalgamation-3450300.zip
-    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    libpqxx
+    GIT_REPOSITORY https://github.com/jtv/libpqxx.git
+    GIT_TAG 7.9.2
 )
 
 FetchContent_Declare(
@@ -39,17 +44,11 @@ FetchContent_Declare(
     GIT_TAG v2.4.11
 )
 
-FetchContent_MakeAvailable(tgbot-cpp doctest)
+# Отключаем тесты и документацию самой libpqxx при сборке.
+set(SKIP_BUILD_TEST ON CACHE BOOL "" FORCE)
+set(BUILD_DOC OFF CACHE BOOL "" FORCE)
 
-FetchContent_GetProperties(sqlite3)
-if(NOT sqlite3_POPULATED)
-    FetchContent_Populate(sqlite3)
-endif()
-
-# SQLite собирается из амальгамации средствами CMake.
-add_library(sqlite3_lib STATIC ${sqlite3_SOURCE_DIR}/sqlite3.c)
-target_include_directories(sqlite3_lib PUBLIC ${sqlite3_SOURCE_DIR})
-target_compile_definitions(sqlite3_lib PRIVATE SQLITE_THREADSAFE=1)
+FetchContent_MakeAvailable(tgbot-cpp libpqxx doctest)
 
 # --- Базовая библиотека (используется и ботом, и тестами) ----------------
 add_library(aaip_core STATIC
@@ -62,7 +61,7 @@ target_link_libraries(aaip_core
     PUBLIC
     OpenSSL::SSL
     OpenSSL::Crypto
-    sqlite3_lib
+    libpqxx::pqxx
 )
 
 # --- Исполняемый файл бота ----------------------------------------------
